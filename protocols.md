@@ -11,6 +11,7 @@ IP / IPv6 / UDP / TCP 协议
 IP
 --------
 ![](/images/IP.png "IP数据报格式")
+*标示：
 
 
 IPv6
