@@ -5,8 +5,8 @@ IP / IPv6 / UDP / TCP 协议
 ## 目录
 * [IP](#IP)
 * [IPv6](#IPv6)
-* [udp](#udp)
-* [tcp](#tcp)
+* [UDP](#UDP)
+* [TCP](#TCP)
 
 IP
 --------
