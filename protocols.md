@@ -10,7 +10,7 @@ IP / IPv6 / udp / tcp 协议
 
 IP
 --------
-![](IP.png "IP数据报格式")
+![](/images/IP.png "IP数据报格式")
 
 
 IPv6
