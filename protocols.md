@@ -1,19 +1,19 @@
-ip / ipv6 / udp / tcp 协议
+IP / IPv6 / udp / tcp 协议
 ==========================
 
 ****
 ## 目录
-* [ip](#ip)
-* [ipv6](#ipv6)
+* [IP](#IP)
+* [IPv6](#IPv6)
 * [udp](#udp)
 * [tcp](#tcp)
 
-ip
+IP
 --------
 
 
 
-ipv6
+IPv6
 --------
 
 
