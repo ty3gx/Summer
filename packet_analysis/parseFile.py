@@ -3,6 +3,8 @@ import operator
 import print_pcap
 import logging
 import lib.logger as logger
+from datetime import datetime
+from datetime import timedelta
 
 srcIP = {}
 dstIP = {}
@@ -15,7 +17,8 @@ UDPPckCount = 0
 SYNFlagCount = 0
 monListCount = 0
 SSDPCount = 0
-
+startTime = datetime.strptime("9999-12-31 23:59:59", "%Y-%m-%d %H:%M:%S")
+endTime = datetime.strptime("0001-1-1 0:0:0", "%Y-%m-%d %H:%M:%S")
 
 def parseFile(filename):
 	f = open(filename, 'r')
@@ -68,6 +71,15 @@ def parseFile(filename):
 			if (templine[1:4] == "TCP"): # TCP
 				flags = templine.split("FLAGS=[")[1].split(']')[0]
 				if ("SYN" in flags) and ("ACK" not in flags): # SYN flag
+					tempTime =  templine.split('-')[0][-4:] + "-" + templine.split('-', 1)[1].split(']')[0]
+					currentTime = datetime.strptime(tempTime, "%Y-%m-%d %H:%M:%S")
+					global startTime
+					global endTime
+					if currentTime < startTime: 
+						startTime = currentTime
+					if currentTime > endTime:
+						endTime = currentTime
+					
 					global SYNFlagCount
 					SYNFlagCount += 1
 				global TCPPckCount
@@ -221,3 +233,6 @@ if __name__ == '__main__':
 	print sorted_dstIP[0:5]
 	print("Most frequent destination ports:")
 	print sorted_dstPort[0:5]
+
+	# print("Number of SYN packets processed per second: " + \
+	#	str(SYNFlagCount / (timedelta.total_seconds(endTime - startTime) + 1)))
