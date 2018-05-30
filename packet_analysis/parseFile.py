@@ -7,6 +7,8 @@ from datetime import datetime
 from datetime import timedelta
 import os
 
+PCK_LIMIT = 2
+
 srcIP = {}
 dstIP = {}
 srcPort = {}
@@ -158,6 +160,8 @@ if __name__ == '__main__':
 
    	(options, args) = parser.parse_args()
    	ppo = print_pcap.PCAPParse(options.pcapfile)
+   	print("-------------------------------------------------------------------")
+   	print "Start reading pcap file: "
 
    	outFile = options.pcapfile[0:len(options.pcapfile)-5]
    	outFile += "_result.txt"
@@ -189,6 +193,9 @@ if __name__ == '__main__':
 
 	f.close()
 
+	print("-------------------------------------------------------------------")
+	print "Start parsing result: "
+
 
 	parseFile(outFile)
 
@@ -207,7 +214,7 @@ if __name__ == '__main__':
 
 	tempCount = 0
 	for tempIP in srcIP:
-		if  srcIP[tempIP] <= 2:
+		if  srcIP[tempIP] <= PCK_LIMIT:
 			tempCount += 1
 	print("Number of source IPs: " + str(len(srcIP)))
 	print("Number of destination IPs: " + str(len(dstIP)))
