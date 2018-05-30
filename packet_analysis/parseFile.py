@@ -5,6 +5,7 @@ import logging
 import lib.logger as logger
 from datetime import datetime
 from datetime import timedelta
+import os
 
 srcIP = {}
 dstIP = {}
@@ -158,11 +159,11 @@ if __name__ == '__main__':
    	(options, args) = parser.parse_args()
    	ppo = print_pcap.PCAPParse(options.pcapfile)
 
+   	outFile = options.pcapfile[0:len(options.pcapfile)-5]
+   	outFile += "_result.txt"
    	if options.storeResult:
-   		outFile = options.pcapfile[0:len(options.pcapfile)-5]
-    	outFile += "_result.txt"
-    	print "Output will be stored in file: " + outFile
-    	f = open(outFile, 'w')
+   		print "Output will be stored in file: " + outFile
+   	f = open(outFile, 'w')
 
    	if options.assetip:
    		asset_ip = options.assetip.strip().split(",")
@@ -183,12 +184,10 @@ if __name__ == '__main__':
         	if options.printResult:
         		print l
 
-        	if options.storeResult:
-        		f.write(l)
-        		f.write('\n')
+        	f.write(l)
+        	f.write('\n')
 
-   	if options.storeResult:
-   		f.close()
+	f.close()
 
 
 	parseFile(outFile)
@@ -236,3 +235,7 @@ if __name__ == '__main__':
 
 	# print("Number of SYN packets processed per second: " + \
 	#	str(SYNFlagCount / (timedelta.total_seconds(endTime - startTime) + 1)))
+
+
+	if not options.storeResult:
+		os.remove(outFile)
