@@ -7,14 +7,14 @@
 ------
 #### Ubuntu: 
 
-* [pynids](https://jon.oberheide.org/pynids/)
+* [pynids](https://jon.oberheide.org/pynids/)  
 `bash install_pynids.bash`
 
-* [dpkt](http://dpkt.readthedocs.io/en/latest/)
+* [dpkt](http://dpkt.readthedocs.io/en/latest/)  
 `sudo apt-get install python-pip`
 `pip install dpkt`
 
-* [requests](http://www.python-requests.org/en/master/)
+* [requests](http://www.python-requests.org/en/master/)  
 `pip install requests`
 
 使用
