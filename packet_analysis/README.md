@@ -17,13 +17,13 @@
 
 使用
 ------
-读取PCAP数据包，打印报文分析结果  
+* 读取PCAP数据包，打印报文分析结果  
 `python parseFile.py --pcapfile=FILE_NAME`  
-其他选项：  
-`--printResult`: 打印详细的报文信息到标准输出，默认为0（不打印）  
-`--saveResult`: 保存详细的报文信息到文件，默认为1（保存），保存路径为"原PCAP文件名_result.txt"  
-`--assetip`: 仅分析该指定目的IP的报文信息  
-`--assetport`: 仅分析该指定目的端口的报文信息  
+* 其他选项：  
+** `--printResult`: 打印详细的报文信息到标准输出，默认为0（不打印）  
+** `--saveResult`: 保存详细的报文信息到文件，默认为1（保存），保存路径为"原PCAP文件名_result.txt"  
+** `--assetip`: 仅分析该指定目的IP的报文信息  
+** `--assetport`: 仅分析该指定目的端口的报文信息  
 
  
 功能
