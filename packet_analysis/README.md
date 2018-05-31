@@ -16,8 +16,8 @@
 * [requests](http://www.python-requests.org/en/master/)  
 `pip install requests`
 
-* [geoIP](https://pythonhosted.org/python-geoip/)  
-`sudo pip install python-geoip`
+* [GeoIP](https://github.com/maxmind/geoip-api-python)  
+`sudo pip install GeoIP`
 可通过geoIP查询
 
 #### MacOS (10.13.2 High Sierra)
@@ -30,8 +30,8 @@
 * [requests](http://www.python-requests.org/en/master/)  
 `pip install requests`
 
-* [geoIP](https://pythonhosted.org/python-geoip/)  
-`sudo pip install python-geoip`
+* [GeoIP](https://github.com/maxmind/geoip-api-python)  
+`sudo pip install GeoIP`
 
 使用
 ------
@@ -49,9 +49,12 @@
 ------
 * 分析IP地址与端口。
    * 找出出现频率最高的源地址与端口，及具体出现频率
-   * 找出仅发送了很少包的源IP地址（默认为仅发送两个或更少包的源IP地址，可通过修改“PCK_LIMIT”值自行定义）
+   * 找出仅发送了很少包的源IP地址（默认为仅发送两个或更少包的源IP地址，可通过修改“THRESHOLD”值自行定义）
    * 找出出现频率最高的目的地址与端口，及具体出现频率
    * 分别分析不同的源IP地址与目的IP地址的数量
+   * 分析统计源IP地址与目的IP地址所在城市  
+   （使用了GeoIP及[GeoLite City](https://dev.maxmind.com/geoip/legacy/geolite/)数据库进行分析。
+   `This product includes GeoLite data created by MaxMind, available from <ahref="http://www.maxmind.com">http://www.maxmind.com</a>.`，最新版本的数据库可[在此](https://dev.maxmind.com/geoip/legacy/geolite/)进行更新）
    
 * 分析具体的包文信息
    * 分析TCP包与UDP包的个数
