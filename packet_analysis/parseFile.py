@@ -53,26 +53,26 @@ def parseFile(filename):
 			srcG = g.record_by_name(ip[0])
 			dstG = g.record_by_name(ip[1])
 			if srcG is None:
-				srcGStr = "none"
+				srcGStr = "N/A"
 			else:
 				if srcG["city"] is None: 
-					srcG["city"] = "none"
+					srcG["city"] = "N/A"
 				if srcG["region_name"] is None: 
-					srcG["region_name"] = "none"
+					srcG["region_name"] = "N/A"
 				if srcG["country_name"] is None: 
-					srcG["country_name"] = "none"
+					srcG["country_name"] = "N/A"
 
 				srcGStr = srcG["city"] + ", " + srcG["region_name"] + ", " + srcG["country_name"]
 
 			if srcG is None:
-				srcGStr = "none"
+				srcGStr = "N/A"
 			else:
 				if dstG["city"] is None: 
-					dstG["city"] = "none"
+					dstG["city"] = "N/A"
 				if dstG["region_name"] is None: 
-					dstG["region_name"] = "none"
+					dstG["region_name"] = "N/A"
 				if dstG["country_name"] is None: 
-					dstG["country_name"] = "none"
+					dstG["country_name"] = "N/A"
 
 				dstGStr = dstG["city"] + ", " + dstG["region_name"] + ", " + dstG["country_name"]
 
@@ -295,9 +295,17 @@ if __name__ == '__main__':
 	print("")
 	print("Most frequent source IPs:")
 	for i in range(0, options.maxIP):
+		if i >= len(sorted_srcIP):
+			break
 		gir = gi.record_by_name(sorted_srcIP[i][0])
 		print(str(sorted_srcIP[i]) + ": "), 
 		if gir is not None:
+			if gir["city"] is None:
+				gir["city"] = "N/A"
+			if gir["region_name"] is None:
+				gir["region_name"] = "N/A"
+			if gir["country_name"] is None:
+				gir["country_name"] = "N/A"
 			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"])
 		else:
 			print ("N/A")
@@ -310,9 +318,17 @@ if __name__ == '__main__':
 	print("")
 	print("Most frequent destination IPs:")
 	for i in range(0, options.maxIP):
+		if i >= len(sorted_dstIP):
+			break
 		gir = gi.record_by_name(sorted_dstIP[i][0])
 		print(str(sorted_dstIP[i]) + ": "), 
 		if gir is not None:
+			if gir["city"] is None:
+				gir["city"] = "N/A"
+			if gir["region_name"] is None:
+				gir["region_name"] = "N/A"
+			if gir["country_name"] is None:
+				gir["country_name"] = "N/A"
 			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"])
 		else:
 			print ("N/A")
