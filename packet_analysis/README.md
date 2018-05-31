@@ -17,8 +17,16 @@
 `pip install requests`
 
 * [GeoIP](https://github.com/maxmind/geoip-api-python)  
-`sudo pip install GeoIP`
-可通过geoIP查询
+`sudo pip install GeoIP`  
+
+* [pyecharts](http://pyecharts.org/#/zh-cn/)  
+`sudo pip install pyecharts`  
+另需安装地图文件包：  
+`pip install echarts-countries-pypkg`  
+`pip install echarts-china-provinces-pypkg`  
+`pip install echarts-china-cities-pypkg`  
+`pip install echarts-china-counties-pypkg`  
+`pip install echarts-china-misc-pypkg`  
 
 #### MacOS (10.13.2 High Sierra)
 * [pynids](https://jon.oberheide.org/pynids/)  
@@ -31,7 +39,16 @@
 `pip install requests`
 
 * [GeoIP](https://github.com/maxmind/geoip-api-python)  
-`sudo pip install GeoIP`
+`pip install GeoIP`
+
+* [pyecharts](http://pyecharts.org/#/zh-cn/)  
+`pip install pyecharts`  
+另需安装地图文件包：  
+`pip install echarts-countries-pypkg`  
+`pip install echarts-china-provinces-pypkg`  
+`pip install echarts-china-cities-pypkg`  
+`pip install echarts-china-counties-pypkg`  
+`pip install echarts-china-misc-pypkg`  
 
 使用
 ------
@@ -61,6 +78,8 @@
    * 计算TCP包中SYN flag包（不含ACK flag的包）的个数 ——> 可能为SYN flood攻击
    * 计算UDP包中monlist请求的个数 ——> 可能为NTP monlist指令反射型分布式拒绝服务攻击
    * 计算SSDP包的个数 ——> 可能为SSDP反射放大攻击
+   
+   ![Image](/images/TCP.png "TCP信息包格式")
    
    
    
