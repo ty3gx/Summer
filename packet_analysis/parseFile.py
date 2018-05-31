@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 import re
 import operator
 import print_pcap
@@ -7,6 +9,7 @@ from datetime import datetime
 from datetime import timedelta
 import os
 import GeoIP
+from pyecharts import Geo
 
 THRESHOLD = 2
 PRINT_LIMIT = 5
@@ -341,6 +344,34 @@ if __name__ == '__main__':
 
 	# print("Number of SYN packets processed per second: " + \
 	#	str(SYNFlagCount / (timedelta.total_seconds(endTime - startTime) + 1)))
+
+
+	tempI = 0
+	for i in range (0, len(sorted_srcIP)):
+		if sorted_srcIP[i][1] < 10:
+			tempI = i
+			break
+
+	geo_cities_coords = {}
+	attr = []
+	value = []
+	for i in range (tempI, 0, -1):
+		gir = gi.record_by_name(sorted_srcIP[i][0])
+		if gir is not None:
+
+			geo_cities_coords[sorted_srcIP[i][0]] = [float(gir["longitude"]), float(gir["latitude"])]
+
+			attr.append(sorted_srcIP[i][0])
+			value.append(sorted_srcIP[i][1])
+
+	geo = Geo("Source IP geograpic distribution", "", title_color="#fff",
+          title_pos="center", width=1200,
+          height=600, background_color='#404a59')
+	geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1] / 2], visual_text_color="#fff",
+        symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords)
+	geo.render()
+
+
 
 
 	if not options.storeResult:
