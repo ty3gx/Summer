@@ -367,8 +367,8 @@ if __name__ == '__main__':
 	geo = Geo("Source IP geograpic distribution", "", title_color="#fff",
           title_pos="center", width=1200,
           height=600, background_color='#404a59')
-	geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1] / 2], visual_text_color="#fff",
-        symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords)
+	geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1]], visual_text_color="#fff",
+        symbol_size=5, is_visualmap=True, geo_cities_coords=geo_cities_coords, type="heatmap")
 	geo.render()
 
 
