@@ -73,7 +73,7 @@
    （使用了GeoIP及[GeoLite City](http://geolite.maxmind.com/download/geoip/database/LICENSE.txt)数据库进行分析，最新版本的数据库可[在此](https://dev.maxmind.com/geoip/legacy/geolite/)进行更新。当前使用的数据库为2018年三月更新的版本。）  
    `This product includes GeoLite data created by MaxMind, available from [http://www.maxmind.com]`
    * 将源IP地址所在城市画图以便可视化分析，图将储存为“render.html”，用浏览器即可打开见如下图可交互界面
-   ![Image](/images/IPSourceGraph.png "IP地址分析地图")
+   ![Image](/images/IPSourceGraph_2.png "IP地址分析地图")
    
 * 分析具体的包文信息
    * 分析TCP包与UDP包的个数
