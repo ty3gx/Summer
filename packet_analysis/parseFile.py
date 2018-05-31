@@ -6,11 +6,15 @@ import lib.logger as logger
 from datetime import datetime
 from datetime import timedelta
 import os
+import GeoIP
 
-PCK_LIMIT = 2
+THRESHOLD = 2
+PRINT_LIMIT = 5
 
 srcIP = {}
 dstIP = {}
+srcGeoIP = {}
+dstGeoIP = {}
 srcPort = {}
 dstPort = {}
 srcIPPort = {}
@@ -24,6 +28,8 @@ startTime = datetime.strptime("9999-12-31 23:59:59", "%Y-%m-%d %H:%M:%S")
 endTime = datetime.strptime("0001-1-1 0:0:0", "%Y-%m-%d %H:%M:%S")
 
 def parseFile(filename):
+	g = GeoIP.open("GeoLiteCity.dat", GeoIP.GEOIP_INDEX_CACHE | GeoIP.GEOIP_CHECK_CACHE)
+
 	f = open(filename, 'r')
 	for line in f:
 		templine = line.strip()
@@ -43,6 +49,42 @@ def parseFile(filename):
 				dstIP[ip[1]]+=1
 			else:
 				dstIP[ip[1]] = 1
+
+			srcG = g.record_by_name(ip[0])
+			dstG = g.record_by_name(ip[1])
+			if srcG is None:
+				srcGStr = "none"
+			else:
+				if srcG["city"] is None: 
+					srcG["city"] = "none"
+				if srcG["region_name"] is None: 
+					srcG["region_name"] = "none"
+				if srcG["country_name"] is None: 
+					srcG["country_name"] = "none"
+
+				srcGStr = srcG["city"] + ", " + srcG["region_name"] + ", " + srcG["country_name"]
+
+			if srcG is None:
+				srcGStr = "none"
+			else:
+				if dstG["city"] is None: 
+					dstG["city"] = "none"
+				if dstG["region_name"] is None: 
+					dstG["region_name"] = "none"
+				if dstG["country_name"] is None: 
+					dstG["country_name"] = "none"
+
+				dstGStr = dstG["city"] + ", " + dstG["region_name"] + ", " + dstG["country_name"]
+
+			global  srcGeoIP, dstGeoIP
+			if srcGeoIP.has_key(srcGStr):
+				srcGeoIP[srcGStr] += 1
+			else: 
+				srcGeoIP[srcGStr] = 1
+			if dstGeoIP.has_key(dstGStr):
+				dstGeoIP[dstGStr] += 1
+			else: 
+				dstGeoIP[dstGStr] = 1
 
 			
 			srcP = templine.split(ip[0] + ':', 1)[1].split('(')[0]
@@ -158,6 +200,13 @@ if __name__ == '__main__':
         default=1
     )
 
+	parser.add_option(
+        "--maxIP", dest="maxIP",
+        action='store', type='int',
+        help= "specify the amount of ip addresses want to output",
+        default=5
+    )
+
    	(options, args) = parser.parse_args()
    	ppo = print_pcap.PCAPParse(options.pcapfile)
    	print("-------------------------------------------------------------------")
@@ -208,13 +257,21 @@ if __name__ == '__main__':
 	sorted_srcPort = sorted(srcPort.items(), key=operator.itemgetter(1), reverse=True)
 	sorted_dstPort = sorted(dstPort.items(), key=operator.itemgetter(1), reverse=True)
 
+	sorted_srcGeoIP = sorted(srcGeoIP.items(), key=operator.itemgetter(1), reverse=True)
+	sorted_dstGeoIP = sorted(dstGeoIP.items(), key=operator.itemgetter(1), reverse=True)
+
+	#import ip database
+	gi = GeoIP.open("GeoLiteCity.dat", GeoIP.GEOIP_INDEX_CACHE | GeoIP.GEOIP_CHECK_CACHE)
+
+	#gi.close()
+
 	print("-------------------------------------------------------------------")
 	print("Summary: ")
 	print("Total packets processed: " + str(UDPPckCount + TCPPckCount))
 
 	tempCount = 0
 	for tempIP in srcIP:
-		if  srcIP[tempIP] <= PCK_LIMIT:
+		if  srcIP[tempIP] <= THRESHOLD:
 			tempCount += 1
 	print("Number of source IPs: " + str(len(srcIP)))
 	print("Number of destination IPs: " + str(len(dstIP)))
@@ -225,20 +282,46 @@ if __name__ == '__main__':
 	print("UDP packets processed: " + str(UDPPckCount))
 	print("    monlist requests found in UDP (NTP) packets: "  + str(monListCount))
 	print("    SSDP packets found in UDP packets: "  + str(SSDPCount))
+
+	print("")
+	print("Most frequent source IP cities: ")
+	print(sorted_srcGeoIP[0:options.maxIP])
+	print("Most frequent destination IP cities: ")
+	print(sorted_dstGeoIP[0:options.maxIP])
+
 	print("")
 	print("Most frequent source IP and ports:")
-	print sorted_srcIPPort[0:5]
+	print sorted_srcIPPort[0:options.maxIP]
+	print("")
 	print("Most frequent source IPs:")
-	print sorted_srcIP[0:5]
+	for i in range(0, options.maxIP):
+		gir = gi.record_by_name(sorted_srcIP[i][0])
+		print(str(sorted_srcIP[i]) + ": "), 
+		if gir is not None:
+			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"])
+		else:
+			print ("N/A")
+	print("")
 	print("Most frequent source ports:")
-	print sorted_srcPort[0:5]
+	print sorted_srcPort[0:options.maxIP]
 	print("")
 	print("Most frequent destination IP and ports:")
-	print sorted_dstIPPort[0:5]
+	print sorted_dstIPPort[0:options.maxIP]
+	print("")
 	print("Most frequent destination IPs:")
-	print sorted_dstIP[0:5]
+	for i in range(0, options.maxIP):
+		gir = gi.record_by_name(sorted_dstIP[i][0])
+		print(str(sorted_dstIP[i]) + ": "), 
+		if gir is not None:
+			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"])
+		else:
+			print ("N/A")
+	print("")
 	print("Most frequent destination ports:")
-	print sorted_dstPort[0:5]
+	print sorted_dstPort[0:options.maxIP]
+
+	#print (geolite2.lookup(sorted_dstIP[0][0]).country)
+	#print (geolite2.lookup(sorted_dstIP[0][0]).city.names)
 
 	# print("Number of SYN packets processed per second: " + \
 	#	str(SYNFlagCount / (timedelta.total_seconds(endTime - startTime) + 1)))
