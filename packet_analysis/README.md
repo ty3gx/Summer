@@ -75,6 +75,8 @@
    `This product includes GeoLite data created by MaxMind, available from [http://www.maxmind.com]`
    * 将源IP地址及目标IP地址所在城市分别画图以便可视化分析，具体设定见使用中`--graphIP`选项，用浏览器即可打开见如下图可交互界面。默认剔除收发包少于或等于“THRESHOLD”值的IP地址以加强表现（此值默认为2，见上）
    ![Image](/images/IPGeoGraph.png "源IP地址分析地图")
+   同时用户也可以通过更改代码中`geo.add()`函数中`maptype`参数自行更改想要显示的地图种类（范围），详情见[pyecharts官网](http://pyecharts.org/#/zh-cn/charts?id=geo%EF%BC%88%E5%9C%B0%E7%90%86%E5%9D%90%E6%A0%87%E7%B3%BB%EF%BC%89)中对该部分的说明，请确保下载对应的地图包。例如下图是使用同样的数据组，源地址使用`maptype="world"`，目标地址使用`maptype=u"成都"`画图得到的结果。
+   ![Image](/images/IPGeoGraph_2.png "源IP地址分析地图")
    
 * 分析具体的包文信息
    * 分析TCP包与UDP包的个数
