@@ -210,6 +210,13 @@ if __name__ == '__main__':
         default=5
     )
 
+	parser.add_option(
+    	"--graphIP", dest="graphIP",
+		action='store', type='string',
+		help= "Specify the output file of IP graph (enter 'None' to not graph)",
+		default= "outGraph"
+	)
+
    	(options, args) = parser.parse_args()
    	ppo = print_pcap.PCAPParse(options.pcapfile)
    	print("-------------------------------------------------------------------")
@@ -348,63 +355,65 @@ if __name__ == '__main__':
 	### Graphing of IP sources ###
 
 	# eliminate IP address sending few packets to ensure performance
-	tempI = 0
-	for i in range (0, len(sorted_srcIP)):
-		if sorted_srcIP[i][1] < THRESHOLD:
-			tempI = i
-			break
+	if cmp(options.graphIP, "None") is not 0: 
 
-	if tempI > len(sorted_srcIP) + 1:
-		tempI = len(sorted_srcIP) + 1
+		tempI = 0
+		for i in range (0, len(sorted_srcIP)):
+			if sorted_srcIP[i][1] < THRESHOLD:
+				tempI = i
+				break
 
-	geo_cities_coords = {}
-	attr = []
-	value = []
-	for i in range (0, tempI):
-		gir = gi.record_by_name(sorted_srcIP[i][0])
-		if gir is not None:
+		if tempI > len(sorted_srcIP) + 1:
+			tempI = len(sorted_srcIP) + 1
 
-			geo_cities_coords[sorted_srcIP[i][0]] = [float(gir["longitude"]), float(gir["latitude"])]
+		geo_cities_coords = {}
+		attr = []
+		value = []
+		for i in range (0, tempI):
+			gir = gi.record_by_name(sorted_srcIP[i][0])
+			if gir is not None:
 
-			attr.append(sorted_srcIP[i][0])
-			value.append(sorted_srcIP[i][1])
+				geo_cities_coords[sorted_srcIP[i][0]] = [float(gir["longitude"]), float(gir["latitude"])]
 
-	geo = Geo("Source IP geograpic distribution", "", title_color="#fff",
-          title_pos="center", width=1200,
-          height=600, background_color='#404a59')
-	geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1]], visual_text_color="#fff",
-        symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
-	geo.render("SourceGrouph.html")
+				attr.append(sorted_srcIP[i][0])
+				value.append(sorted_srcIP[i][1])
+
+		geo = Geo("Source IP geograpic distribution", "", title_color="#fff",
+          	title_pos="center", width=1200,
+          	height=600, background_color='#404a59')
+		geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1]], visual_text_color="#fff",
+        	symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
+		geo.render(options.graphIP + "_source.html")
 
 
 
-	tempI = 0
-	for i in range (0, len(sorted_dstIP)):
-		if sorted_dstIP[i][1] < THRESHOLD:
-			tempI = i
-			break
+		tempI = 0
+		for i in range (0, len(sorted_dstIP)):
+			if sorted_dstIP[i][1] < THRESHOLD:
+				tempI = i
+				break
 
-	if tempI > len(sorted_dstIP) + 1:
-		tempI = len(sorted_dstIP) + 1
+		if tempI > len(sorted_dstIP) + 1:
+			tempI = len(sorted_dstIP) + 1
 	
-	geo_cities_coords = {}
-	attr = []
-	value = []
-	for i in range (0, tempI):
-		gir = gi.record_by_name(sorted_dstIP[i][0])
-		if gir is not None:
+		geo_cities_coords = {}
+		attr = []
+		value = []
+		for i in range (0, tempI):
+			gir = gi.record_by_name(sorted_dstIP[i][0])
+			if gir is not None:
 
-			geo_cities_coords[sorted_dstIP[i][0]] = [float(gir["longitude"]), float(gir["latitude"])]
+				geo_cities_coords[sorted_dstIP[i][0]] = [float(gir["longitude"]), float(gir["latitude"])]
 
-			attr.append(sorted_dstIP[i][0])
-			value.append(sorted_dstIP[i][1])
+				attr.append(sorted_dstIP[i][0])
+				value.append(sorted_dstIP[i][1])
 
-	geo = Geo("Destination IP geograpic distribution", "", title_color="#fff",
-          title_pos="center", width=1200,
-          height=600, background_color='#404a59')
-	geo.add("", attr, value, visual_range=[0, sorted_dstIP[0][1]], visual_text_color="#fff",
-        symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
-	geo.render("DestinationGrouph.html")
+		geo = Geo("Destination IP geograpic distribution", "", title_color="#fff",
+          	title_pos="center", width=1200,
+          	height=600, background_color='#404a59')
+		geo.add("", attr, value, visual_range=[0, sorted_dstIP[0][1]], visual_text_color="#fff",
+        	symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
+		geo.render(options.graphIP + "_destination.html")
 
 
 
