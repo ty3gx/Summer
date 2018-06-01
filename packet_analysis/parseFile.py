@@ -345,12 +345,17 @@ if __name__ == '__main__':
 	# print("Number of SYN packets processed per second: " + \
 	#	str(SYNFlagCount / (timedelta.total_seconds(endTime - startTime) + 1)))
 
+	### Graphing of IP sources ###
 
+	# eliminate IP address sending few packets to ensure performance
 	tempI = 0
 	for i in range (0, len(sorted_srcIP)):
-		if sorted_srcIP[i][1] < 10:
+		if sorted_srcIP[i][1] < THRESHOLD:
 			tempI = i
 			break
+
+	if tempI > len(sorted_srcIP) + 1:
+		tempI = len(sorted_srcIP) + 1
 
 	geo_cities_coords = {}
 	attr = []
@@ -367,17 +372,25 @@ if __name__ == '__main__':
 	geo = Geo("Source IP geograpic distribution", "", title_color="#fff",
           title_pos="center", width=1200,
           height=600, background_color='#404a59')
-	geo.add("Source", attr, value, visual_range=[0, sorted_srcIP[0][1] / 2], visual_text_color="#fff",
+	geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1]], visual_text_color="#fff",
         symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
-	geo.render("SourceGrouph_temp.html")
+	geo.render("SourceGrouph.html")
 
 
 
+	tempI = 0
+	for i in range (0, len(sorted_dstIP)):
+		if sorted_dstIP[i][1] < THRESHOLD:
+			tempI = i
+			break
+
+	if tempI > len(sorted_dstIP) + 1:
+		tempI = len(sorted_dstIP) + 1
 	
 	geo_cities_coords = {}
 	attr = []
 	value = []
-	for i in range (0, len(sorted_dstIP)):
+	for i in range (0, tempI):
 		gir = gi.record_by_name(sorted_dstIP[i][0])
 		if gir is not None:
 
@@ -386,10 +399,10 @@ if __name__ == '__main__':
 			attr.append(sorted_dstIP[i][0])
 			value.append(sorted_dstIP[i][1])
 
-	geo = Geo("destination IP geograpic distribution", "", title_color="#fff",
+	geo = Geo("Destination IP geograpic distribution", "", title_color="#fff",
           title_pos="center", width=1200,
           height=600, background_color='#404a59')
-	geo.add("", attr, value, visual_range=[0, sorted_dstIP[0][1] / 2], visual_text_color="#fff",
+	geo.add("", attr, value, visual_range=[0, sorted_dstIP[0][1]], visual_text_color="#fff",
         symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
 	geo.render("DestinationGrouph.html")
 
