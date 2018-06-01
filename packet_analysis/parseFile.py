@@ -355,7 +355,7 @@ if __name__ == '__main__':
 	geo_cities_coords = {}
 	attr = []
 	value = []
-	for i in range (tempI, 0, -1):
+	for i in range (0, tempI):
 		gir = gi.record_by_name(sorted_srcIP[i][0])
 		if gir is not None:
 
@@ -367,9 +367,31 @@ if __name__ == '__main__':
 	geo = Geo("Source IP geograpic distribution", "", title_color="#fff",
           title_pos="center", width=1200,
           height=600, background_color='#404a59')
-	geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1]], visual_text_color="#fff",
-        symbol_size=5, is_visualmap=True, geo_cities_coords=geo_cities_coords, type="heatmap")
-	geo.render()
+	geo.add("Source", attr, value, visual_range=[0, sorted_srcIP[0][1] / 2], visual_text_color="#fff",
+        symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
+	geo.render("SourceGrouph_temp.html")
+
+
+
+	
+	geo_cities_coords = {}
+	attr = []
+	value = []
+	for i in range (0, len(sorted_dstIP)):
+		gir = gi.record_by_name(sorted_dstIP[i][0])
+		if gir is not None:
+
+			geo_cities_coords[sorted_dstIP[i][0]] = [float(gir["longitude"]), float(gir["latitude"])]
+
+			attr.append(sorted_dstIP[i][0])
+			value.append(sorted_dstIP[i][1])
+
+	geo = Geo("destination IP geograpic distribution", "", title_color="#fff",
+          title_pos="center", width=1200,
+          height=600, background_color='#404a59')
+	geo.add("", attr, value, visual_range=[0, sorted_dstIP[0][1] / 2], visual_text_color="#fff",
+        symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
+	geo.render("DestinationGrouph.html")
 
 
 
