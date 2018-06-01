@@ -60,6 +60,7 @@
     * `--maxIP`: 指定结果中打印的最频繁出现的IP源/目的地址与端口的个数，默认值为5  
     * `--assetip`: 仅分析该指定目的IP的报文信息  
     * `--assetport`: 仅分析该指定目的端口的报文信息  
+    * `--graphIP`: 指定IP地址来源图的保存路径，源IP地址的图会储存在“路径_source.html”，目标IP地址图会储存在“路径_destination.html”。默认地址为“outGraph_source.html”及“outGraph_destination.html”。如果不想打印图，指定此项选项为“None”
 
  
 功能
@@ -72,8 +73,9 @@
    * 分析统计源IP地址与目的IP地址所在城市  
    （使用了GeoIP及[GeoLite City](http://geolite.maxmind.com/download/geoip/database/LICENSE.txt)数据库进行分析，最新版本的数据库可[在此](https://dev.maxmind.com/geoip/legacy/geolite/)进行更新。当前使用的数据库为2018年三月更新的版本。）  
    `This product includes GeoLite data created by MaxMind, available from [http://www.maxmind.com]`
-   * 将源IP地址所在城市画图以便可视化分析，图将储存为“render.html”，用浏览器即可打开见如下图可交互界面
-   ![Image](/images/IPSourceGraph_2.png "IP地址分析地图")
+   * 将源IP地址及目标IP地址所在城市分别画图以便可视化分析，具体设定见使用中`--graphIP`选项，用浏览器即可打开见如下图可交互界面。默认剔除收发包少于或等于“THRESHOLD”值的IP地址以加强表现（此值默认为2，见上）
+   ![Image](/images/srcIPGraph.png "源IP地址分析地图")
+   ![Image](/images/dstIPGraph.png "目标IP地址分析地图")
    
 * 分析具体的包文信息
    * 分析TCP包与UDP包的个数
