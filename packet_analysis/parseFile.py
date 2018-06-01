@@ -382,7 +382,7 @@ if __name__ == '__main__':
           	title_pos="center", title_top=20, width=1200,
           	height=600, background_color='#404a59')
 		geo.add("", attr, value, visual_range=[0, sorted_srcIP[0][1]], visual_text_color="#fff",
-        	is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
+        	is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap", maptype="china")
 		geo.render(options.graphIP + "_source.html")
 
 
@@ -412,7 +412,7 @@ if __name__ == '__main__':
           	title_pos="center", title_top=20, width=1200,
           	height=600, background_color='#404a59')
 		geo.add("", attr, value, visual_range=[0, sorted_dstIP[0][1]], visual_text_color="#fff",
-        	symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap")
+        	symbol_size=15, is_visualmap=True, geo_cities_coords=geo_cities_coords, type = "heatmap", maptype="china")
 		geo.render(options.graphIP + "_destination.html")
 
 
