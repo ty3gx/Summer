@@ -69,8 +69,8 @@ def parseFile(filename):
 
 				srcGStr = srcG["city"] + ", " + srcG["region_name"] + ", " + srcG["country_name"]
 
-			if srcG is None:
-				srcGStr = "N/A"
+			if dstG is None:
+				dstGStr = "N/A"
 			else:
 				if dstG["city"] is None: 
 					dstG["city"] = "N/A"
