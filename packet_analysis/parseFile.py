@@ -27,6 +27,8 @@ UDPPckCount = 0
 SYNFlagCount = 0
 monListCount = 0
 SSDPCount = 0
+DNSCount = 0
+abnormalFlags = 0
 startTime = datetime.strptime("9999-12-31 23:59:59", "%Y-%m-%d %H:%M:%S")
 endTime = datetime.strptime("0001-1-1 0:0:0", "%Y-%m-%d %H:%M:%S")
 
@@ -117,8 +119,33 @@ def parseFile(filename):
 
 
 			if (templine[1:4] == "TCP"): # TCP
-				flags = templine.split("FLAGS=[")[1].split(']')[0]
-				if ("SYN" in flags) and ("ACK" not in flags): # SYN flag
+				flags = [-1, -1, -1, -1, -1, -1] # URG, ACK, PSH, RST, SYN, FIN
+				flagStr = templine.split("FLAGS=[")[1].split(']')[0]
+				if "URG" in flagStr:
+					flags[0] = 1
+				else:
+					flags[0] = 0
+				if "ACK" in flagStr:
+					flags[1] = 1
+				else:
+					flags[1] = 0
+				if "PSH" in flagStr:
+					flags[2] = 1
+				else:
+					flags[2] = 0
+				if "RST" in flagStr:
+					flags[3] = 1
+				else:
+					flags[3] = 0
+				if "SYN" in flagStr:
+					flags[4] = 1
+				else:
+					flags[4] = 0
+				if "FIN" in flagStr:
+					flags[5] = 1
+				else:
+					flags[5] = 0
+				if (flags[4] and not flags[1]): # SYN no ACK
 					tempTime =  templine.split('-')[0][-4:] + "-" + templine.split('-', 1)[1].split(']')[0]
 					currentTime = datetime.strptime(tempTime, "%Y-%m-%d %H:%M:%S")
 					global startTime
@@ -130,20 +157,38 @@ def parseFile(filename):
 					
 					global SYNFlagCount
 					SYNFlagCount += 1
+
+				# URG, ACK, PSH, RST, SYN, FIN
+				if (all(f == 0 for f in flags) or all(f == 1 for f in flags) or \
+					(flags[4] and flags[5]) or (flags[4] and flags[3]) or  \
+					(flags[5] and flags[3]) or (flags[0] and flags[2] and flags[5]) or \
+					(flags[5] and not flags[0] and not flags[1] and not flags[2] and not flags[3]\
+						and not flags[4]) or\
+					(flags[0] and not flags[1] and not flags[2] and not flags[3] and not flags[4]\
+						and not flags[5]) or\
+					(flags[2] and not flags[0] and not flags[1] and not flags[3] and not flags[4]\
+						and not flags[5])) :
+					global abnormalFlags
+					abnormalFlags += 1
+
 				global TCPPckCount
 				TCPPckCount += 1
+
 			else:
 				token = templine.split("DATA_BINARY=", 1)[1]
-				if token[1] == '7' and token[9:11] == "2a": 
+				if token[1] == '7' and token[9:11] == "2a" and srcP == "123": # NTP source port = 123 
 				# moode is 7 and request MON_GETLIST_! (42)
 					global monListCount
 					monListCount += 1
-				else:
-					if srcP == "1900":
-						global SSDPCount
-						SSDPCount += 1
+				elif srcP == "1900": # SSDP source port = 1900
+					global SSDPCount
+					SSDPCount += 1
+				elif srcP == "53":
+					global DNSCount
+					DNSCount += 1
 				global UDPPckCount
 				UDPPckCount += 1
+
 
 				
 	f.close()
@@ -289,8 +334,10 @@ if __name__ == '__main__':
 	print("")
 	print("TCP  packets processed: " + str(TCPPckCount))
 	print("    SYN Flags found in TCP  packets: " + str(SYNFlagCount))
+	print("    Abnormal Flags found in TCP  packets: " + str(abnormalFlags))
 	print("UDP packets processed: " + str(UDPPckCount))
 	print("    monlist requests found in UDP (NTP) packets: "  + str(monListCount))
+	print("    DNS packets found in UDP packets: "  + str(DNSCount))
 	print("    SSDP packets found in UDP packets: "  + str(SSDPCount))
 
 	print("")
