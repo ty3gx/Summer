@@ -180,9 +180,10 @@ def parseFile(filename):
 				# moode is 7 and request MON_GETLIST_! (42)
 					global monListCount
 					monListCount += 1
-				elif srcP == "1900": # SSDP source port = 1900
-					global SSDPCount
-					SSDPCount += 1
+				elif srcP == "1900": # SSDP port = 1900
+					if "55 50 6e 50" in token and "53 54 3a" in token: # UPnP and ST:
+						global SSDPCount
+						SSDPCount += 1
 				elif srcP == "53":
 					global DNSCount
 					DNSCount += 1
