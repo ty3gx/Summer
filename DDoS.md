@@ -205,7 +205,7 @@ DNS反射攻击和传统DNS reply flood有两点本质的不同：
 
 <br><br>
 
-[返回最上](#)
+<center> [返回最上](#)</center >
 
 <br><br><br><br>
-`参考资料：[test](http://forum.huawei.com/enterprise/zh/thread-360365.html)`
+`参考资料：http://forum.huawei.com/enterprise/zh/thread-360365.html`
