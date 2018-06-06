@@ -203,5 +203,7 @@ DNS反射攻击和传统DNS reply flood有两点本质的不同：
 * **修改缓存服务器**
 即[DNS缓存投毒](#dns缓存投毒)，黑客通过修改DNS缓存服务器中的记录达到篡改DNS的目的。
 
+[返回最上](#)
+
 <br><br><br><br>
 `参考资料：http://forum.huawei.com/enterprise/zh/thread-360365.html`
