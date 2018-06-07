@@ -56,129 +56,108 @@ DDoS(Distributed Denial of Service)，即分布式拒绝服务，前身为DoS（
 是一种潜在的攻击行为，并不具备直接的破坏行为，通常是攻击者发动真正攻击前的网络探测行为，例如IP地址扫描和端口扫描等。
 
 ### DDoS攻击类型总结
-</p><table cellpadding="0" cellspacing="0" style="margin:8px 0px;border-collapse:collapse;border:1px solid rgb(187,187,187);color:rgb(0,0,0);font-family:Helvetica, 'Hiragino Sans GB', '微软雅黑', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;font-size:15px;line-height:24px;"><colgroup><col width="180" /><col width="419" /></colgroup><tbody><tr class="firstRow"><td height="27" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border:1px solid rgb(187,187,187);">
 
-OSI 层级 </td>
-
-<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-style:solid solid solid none;border-top-color:rgb(187,187,187);border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-攻击内容 </td>
-
-</tr><tr><td rowspan="11" height="295" dir="ltr" width="190" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
-
-Network Based (2-4层) </td>
-
-<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-IP Fragment </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Tear Drop </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-SYN Flood (Dirt Jumper) </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-TCP (connection) Flood </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-e.g. SYN-ACK, ACK &amp; PUSH-ACK, RST or FIN and Fragmented ACK </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Christmas Tree</td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Fake Session</td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-LAND </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Redirect Traffic Attack </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-ICMP Flood, Ping Floods and SMURF Attacks </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Ping of Death ICMP </td>
-
-</tr><tr><td rowspan="4" height="107" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
-
-DNS based (4层) </td>
-
-<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-UDP Flood </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-UDP Fragment </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-DNS Flood (Distributed and DNS Blacklisting)</td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-e.g. DNS UDP Flood, DNS Query Flood and DNS NXDOMAIN Flood </td>
-
-</tr><tr><td rowspan="2" height="54" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
-
-SSL/TLS based (5–6层) </td>
-
-<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-SSL Floods, Malformed SSL (e.g. empty SSL HELLO) </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-SSL THC attack (Extending from SSL Renegotiation vulnerability) </td>
-
-</tr><tr><td rowspan="8" height="214" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
-
-Application based (6–7层) </td>
-
-<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Slowloris (Nuclear DDoSer, Slowhttptest) </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Keep-Dead </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Slow POST (R-U-Dead-Yet, Tor Hammer, Nuclear DDoSer, Slowhttptest) </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-HashDoS </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-Apache Killer (Slowhttptest) </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-HTTP GET Flood, Recursive GET Flood (Web Scraping), Dirt Jumper (HTTP Flood) </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-#RefRef (exploit SQLi - OWASP Top 10 vulnerability as entry) </td>
-
-</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
-
-XML “Bomb” (DTD attack), XML External Entity DoS </td>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-s6z2{text-align:center}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-s6z2">OSI层级</th>
+    <th class="tg-s6z2">攻击内容</th>
+  </tr>
+  <tr>
+    <td class="tg-s6z2" rowspan="5">基于网络的 (数据链路层、网络层、传输层)攻击</td>
+    <td class="tg-s6z2"><a href="#ip%E7%A2%8E%E7%89%87%E6%94%BB%E5%87%BB">IP碎片攻击</a></td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2"><a href="#%E6%B3%AA%E6%BB%B4%E6%94%BB%E5%87%BB">泪滴攻击</a></td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2"><a href="#syn-flood-%E6%94%BB%E5%87%BB">SYN Flood 攻击</a></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><a href="#syn-ack-flood-%E6%94%BB%E5%87%BB">其他TCP攻击</a></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><a href="#tcp%E5%BC%82%E5%B8%B8%E6%8A%A5%E6%96%87%E6%94%BB%E5%87%BB">TCP异常报文攻击</a></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+</table>
 
 TCP攻击
 ------
