@@ -87,7 +87,7 @@ TCP是面向连接的协议，通信双方必须保持连接状态，并且通�
 
 ### TCP异常报文攻击
 
-TCP报文头中存在六个标志位字段，代表不同的含义，当标志位的值置为1，表示该标志位起作用。在我的[TCP报文介绍](https://github.com/ty3gx/Summer/blob/master/protocols.md#tcp)中有六个标志位（URG，ACK，PSH，RST，SYN，FIN）的详细信息介绍
+TCP报文头中存在六个标志位字段，代表不同的含义，当标志位的值置为1，表示该标志位起作用。在我的[TCP报文介绍](https://github.com/ty3gx/Summer/blob/master/protocols.md#tcp)中有六个标志位（URG，ACK，PSH，RST，SYN，FIN）的详细信息介绍。
 
 这六个标志位在TCP交互过程中各司其职，标志位置1与否必须严格遵循TCP协议规范。如果不遵循规范随意将标志位置0或置1，这类报文就称为TCP异常报文。接收方处理这些异常报文时会消耗系统资源，甚至可能会导致系统崩溃。攻击者也可以利用TCP异常报文来发起DDoS攻击，向被攻击目标发送大量的构造的TCP异常报文，导致被攻击目标系统资源耗尽、网络拥塞，无法正常提供服务。
 
