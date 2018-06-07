@@ -57,13 +57,6 @@ DDoS(Distributed Denial of Service)，即分布式拒绝服务，前身为DoS（
 
 ### DDoS攻击类型总结
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-s6z2{text-align:center}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-</style>
 <table class="tg">
   <tr>
     <th class="tg-s6z2">OSI层级</th>
