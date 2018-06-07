@@ -7,10 +7,12 @@ DDoS攻击
 * [DDoS攻击介绍](#ddos攻击介绍)
 	* [DDoS攻击特点](#ddos攻击特点)
 	*  [DDoS攻击分类](#ddos攻击分类)
+	* [DDoS攻击类型总结](#ddos攻击类型总结)
 * [TCP攻击](#tcp攻击)
 	* [SYN Flood 攻击](#syn-flood-攻击)
 	*  [SYN-ACK Flood 攻击](#syn-ack-flood-攻击)
 	*  [ACK Flood 攻击](#ack-flood-攻击)
+	* [分片 ACK 攻击](#分片-ack-攻击)
 	* [FIN/RST 攻击](#finrst-flood-攻击)
 	* [连接耗尽攻击](#连接耗尽攻击)
 	* [TCP异常报文攻击](#tcp异常报文攻击)
@@ -53,6 +55,130 @@ DDoS(Distributed Denial of Service)，即分布式拒绝服务，前身为DoS（
 * **扫描探测类攻击**  
 是一种潜在的攻击行为，并不具备直接的破坏行为，通常是攻击者发动真正攻击前的网络探测行为，例如IP地址扫描和端口扫描等。
 
+### DDoS攻击类型总结
+</p><table cellpadding="0" cellspacing="0" style="margin:8px 0px;border-collapse:collapse;border:1px solid rgb(187,187,187);color:rgb(0,0,0);font-family:Helvetica, 'Hiragino Sans GB', '微软雅黑', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;font-size:15px;line-height:24px;"><colgroup><col width="180" /><col width="419" /></colgroup><tbody><tr class="firstRow"><td height="27" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border:1px solid rgb(187,187,187);">
+
+OSI 层级 </td>
+
+<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-style:solid solid solid none;border-top-color:rgb(187,187,187);border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+攻击内容 </td>
+
+</tr><tr><td rowspan="11" height="295" dir="ltr" width="190" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
+
+Network Based (2-4层) </td>
+
+<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+IP Fragment </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Tear Drop </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+SYN Flood (Dirt Jumper) </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+TCP (connection) Flood </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+e.g. SYN-ACK, ACK &amp; PUSH-ACK, RST or FIN and Fragmented ACK </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Christmas Tree</td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Fake Session</td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+LAND </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Redirect Traffic Attack </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+ICMP Flood, Ping Floods and SMURF Attacks </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Ping of Death ICMP </td>
+
+</tr><tr><td rowspan="4" height="107" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
+
+DNS based (4层) </td>
+
+<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+UDP Flood </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+UDP Fragment </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+DNS Flood (Distributed and DNS Blacklisting)</td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+e.g. DNS UDP Flood, DNS Query Flood and DNS NXDOMAIN Flood </td>
+
+</tr><tr><td rowspan="2" height="54" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
+
+SSL/TLS based (5–6层) </td>
+
+<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+SSL Floods, Malformed SSL (e.g. empty SSL HELLO) </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+SSL THC attack (Extending from SSL Renegotiation vulnerability) </td>
+
+</tr><tr><td rowspan="8" height="214" dir="ltr" width="191" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:none solid solid;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);border-left-color:rgb(187,187,187);">
+
+Application based (6–7层) </td>
+
+<td dir="ltr" width="407" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Slowloris (Nuclear DDoSer, Slowhttptest) </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Keep-Dead </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Slow POST (R-U-Dead-Yet, Tor Hammer, Nuclear DDoSer, Slowhttptest) </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+HashDoS </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+Apache Killer (Slowhttptest) </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+HTTP GET Flood, Recursive GET Flood (Web Scraping), Dirt Jumper (HTTP Flood) </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+#RefRef (exploit SQLi - OWASP Top 10 vulnerability as entry) </td>
+
+</tr><tr><td height="27" dir="ltr" width="430" style="padding:4px 8px;border-collapse:collapse;border-right-width:1px;border-bottom-width:1px;border-style:none solid solid none;border-right-color:rgb(187,187,187);border-bottom-color:rgb(187,187,187);">
+
+XML “Bomb” (DTD attack), XML External Entity DoS </td>
 
 TCP攻击
 ------
@@ -79,6 +205,9 @@ SYN-ACK Flood攻击正是利用了这一点，攻击者利用工具或者操纵�
 
 从目前情况来看，很少有单纯使用ACK Flood进行的攻击，都会和其他攻击方法混合使用，因此，很容易产生误判。
 
+### 分片 ACK 攻击
+分片ACK Flood攻击（Fragmented ACK Attack）是ACK Flood攻击的一类变种，攻击者通过发送大片的分片报文（1500+字节）消耗服务器资源。由于报文较大，攻击者不需要很快的发送报文就可以达到很好的攻击效果。如果被攻击对象有过滤器检查通过的包裹，组装这些大片的分片报文就会消耗很大资源造成服务器无法访问。如果被攻击对象没有过滤器，这些攻击包能顺利通过包括路由器、ACL、防火墙等多层网络安全检测机制，攻击者能够从而轻而易举的耗尽服务器资源。此类报文的荷载通常为大量的随机的垃圾数据来消耗服务器资源。
+
 ### FIN/RST Flood 攻击
 
 TCP交互过程中还存在FIN和RST报文，FIN报文用来关闭TCP连接，RST报文用来断开TCP连接。这两种报文也可能会被攻击者利用来发起DDoS攻击，导致目标服务器资源耗尽，无法响应正常的请求。
@@ -93,7 +222,9 @@ TCP是面向连接的协议，通信双方必须保持连接状态，并且通�
 
 TCP报文头中存在六个标志位字段，代表不同的含义，当标志位的值置为1，表示该标志位起作用。在我的[TCP报文介绍](https://github.com/ty3gx/Summer/blob/master/protocols.md#tcp)中有六个标志位（URG，ACK，PSH，RST，SYN，FIN）的详细信息介绍
 
-这六个标志位在TCP交互过程中各司其职，标志位置1与否必须严格遵循TCP协议规范。如果不遵循规范随意将标志位置0或置1，这类报文就称为TCP异常报文。接收方处理这些异常报文时会消耗系统资源，甚至可能会导致系统崩溃。攻击者也可以利用TCP异常报文来发起DDoS攻击，向被攻击目标发送大量的构造的TCP异常报文，导致被攻击目标系统资源耗尽、网络拥塞，无法正常提供服务。
+这六个标志位在TCP交互过程中各司其职，标志位置1与否必须严格遵循TCP协议规范。如果不遵循规范随意将标志位置0或置1，这类报文就称为TCP异常报文。例如圣诞树攻击（Christmas Tree Attack）就是设置六个标志全部为1。接收方处理这些异常报文时会消耗系统资源，甚至可能会导致系统崩溃。攻击者也可以利用TCP异常报文来发起DDoS攻击，向被攻击目标发送大量的构造的TCP异常报文，导致被攻击目标系统资源耗尽、网络拥塞，无法正常提供服务。
+
+同时，攻击者通过像服务器发送多种异常报文，并根据服务器的特定反应有时可以大致推测出服务器使用的操作系统，为攻击者之后发动更具针对性的攻击提供便利。
 
 下表为一些TCP异常报文的特点：
 
@@ -220,6 +351,6 @@ IP碎片（IP Fragment）攻击是一种基于数据碎片的攻击手段。而�
 [返回最上](#)
 
 <br><br><br><br>
-`参考资料：`
-`1. http://forum.huawei.com/enterprise/zh/thread-360365.html`
-`2. https://www.corero.com/resources/glossary.html#Fragmented%20ACK%20Flood`
+`参考资料：`  
+`1. http://forum.huawei.com/enterprise/zh/thread-360365.html`  
+`2. https://www.corero.com/resources/glossary.html#Fragmented%20ACK%20Flood`  
