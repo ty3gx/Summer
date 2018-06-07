@@ -6,19 +6,25 @@ DDoS攻击
 ## 目录
 * [DDoS攻击介绍](#ddos攻击介绍)
 	* [DDoS攻击特点](#ddos攻击特点)
-	*  [DDoS攻击分类](#ddos攻击分类)
+	* [DDoS攻击分类](#ddos攻击分类)
 	* [DDoS攻击类型总结](#ddos攻击类型总结)
 * [TCP攻击](#tcp攻击)
 	* [SYN Flood 攻击](#syn-flood-攻击)
 	*  [SYN-ACK Flood 攻击](#syn-ack-flood-攻击)
 	*  [ACK Flood 攻击](#ack-flood-攻击)
 	* [分片 ACK 攻击](#分片-ack-攻击)
-	* [FIN/RST 攻击](#finrst-flood-攻击)
+	* [FIN/RST Flood 攻击](#finrst-flood-攻击)
 	* [连接耗尽攻击](#连接耗尽攻击)
 	* [TCP异常报文攻击](#tcp异常报文攻击)
+	* [TCP虚假会话攻击](#tcp虚假会话攻击)
+	* [LAND攻击](#land攻击)
 * [HTTP攻击](#http攻击)
 	* [HTTP Get/Post Flood 攻击](#http-getpost-flood-攻击)
 	* [HTTP慢速攻击](#http慢速攻击)
+* [ICMP攻击](#icmp攻击)
+	* [ICMP Flood 攻击](#icmp-flood-攻击)
+	* [SMURF攻击](#smurf攻击)
+	* [死亡之Ping攻击](#死亡之ping攻击)
 * [UDP攻击](#udp攻击)
 	* [UDP Flood 攻击](#udp-flood-攻击)
 	* [NTP反射放大攻击](#ntp反射放大攻击)
@@ -63,7 +69,7 @@ DDoS(Distributed Denial of Service)，即分布式拒绝服务，前身为DoS（
     <th class="tg-s6z2">攻击内容</th>
   </tr>
   <tr>
-    <td class="tg-s6z2" rowspan="5">基于网络的 (数据链路层、网络层、传输层)攻击</td>
+    <td class="tg-s6z2" rowspan="11">基于网络 (数据链路层、网络层、传输层)的攻击</td>
     <td class="tg-s6z2"><a href="#ip%E7%A2%8E%E7%89%87%E6%94%BB%E5%87%BB">IP碎片攻击</a></td>
   </tr>
   <tr>
@@ -73,30 +79,28 @@ DDoS(Distributed Denial of Service)，即分布式拒绝服务，前身为DoS（
     <td class="tg-s6z2"><a href="#syn-flood-%E6%94%BB%E5%87%BB">SYN Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#syn-ack-flood-%E6%94%BB%E5%87%BB">其他TCP攻击</a></td>
+    <td class="tg-baqh"><a href="#syn-ack-flood-%E6%94%BB%E5%87%BB">其他TCP Flood攻击</a></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><a href="#%E8%BF%9E%E6%8E%A5%E8%80%97%E5%B0%BD%E6%94%BB%E5%87%BB">连接耗尽攻击</a></td>
   </tr>
   <tr>
     <td class="tg-baqh"><a href="#tcp%E5%BC%82%E5%B8%B8%E6%8A%A5%E6%96%87%E6%94%BB%E5%87%BB">TCP异常报文攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh"><a href="#tcp%E8%99%9A%E5%81%87%E4%BC%9A%E8%AF%9D%E6%94%BB%E5%87%BB">TCP虚假会话攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh"><a href="#land%E6%94%BB%E5%87%BB">LAND攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh"><a href="#icmp-flood-%E6%94%BB%E5%87%BB">ICMP Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh"><a href="#smurf%E6%94%BB%E5%87%BB">SMURF攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh"><a href="#%E6%AD%BB%E4%BA%A1%E4%B9%8Bping%E6%94%BB%E5%87%BB">死亡之Ping攻击</a></td>
   </tr>
   <tr>
     <td class="tg-baqh"></td>
@@ -210,6 +214,14 @@ TCP报文头中存在六个标志位字段，代表不同的含义，当标志�
 | 仅PSH标志位为1 | SYN，RST和FIN标志位为1的分片报文 |
 | 带有载荷的SYN报文 |带有载荷的SYN-ACK报文|
 
+### TCP虚假会话攻击
+在虚假会话（Fake Session）DDoS攻击中，黑客发送多条伪造的SYN包、ACK包及一条或多条FIN/RST包来单方向冒充一套完整有效的TCP会话。由于当前现代网络一般采用不对称设计，即接收和发送使用不同线路从而减少话费提高效率，所以此类攻击很难被仅监控接收线路的防御工具检测到。对于此类单方向监控的防御工具来说，这些报文属于一个正常的TCP会话，从而攻击者能够通过检测消耗服务器资源达到攻击的效果。由于此类攻击相对而言不需要很快的传送速度，因此他在消耗服务器资源的同时更难被检测到。这种攻击大致分两类：
+
+* 攻击者首先发送多个伪造的SYN包，接着发送多个ACK包，最后发送一个或多个FIN/RST包。
+* 攻击者跳过SYN包而直接发送多个ACK包，接着发送一个或多个FIN/RST包。
+
+### LAND攻击
+LAND攻击利用了TCP连接建立的三次握手过程，通过向一个目标计算机发送一个TCP SYN报文而完成对目标计算机的攻击。LAND攻击SYN报文的源IP地址这时将导致接受服务器向它自己的地址发送SYN一ACK消息，结果这个地址又发回ACK消息并创建一个空连接，而每一个这样的连接都将保留直到超时掉。此类攻击的特点是报文的源IP地址与目的IP地址相同，为受攻击的地址。
 
 HTTP攻击
 ------
@@ -223,6 +235,30 @@ HTTP请求头部的后面会存在一个空行（结束符），其中包括回�
 
 * **Slow POST攻击**  
 Slow POST攻击利用的是POST请求方法，攻击者向目标服务器发送POST请求报文提交数据，数据的长度设置为一个很大的数值，但是在随后的数据发送中，每次只发送很小的报文，这样就是导致目标服务器一直等待攻击者发送数据。如果攻击者控制大量的僵尸主机向目标服务器发起这种攻击，将会导致服务器资源耗尽，无法正常提供服务。
+
+
+ICMP攻击
+------
+ICMP（Internet Control Message Protocol）是互联网控制报文协议。它是TCP/IP协议族的一个子协议，用于在IP主机、路由器之间传递控制消息。控制消息是指网络通不通、主机是否可达、路由是否可用等网络本身的消息。这些控制消息虽然并不传输用户数据，但是对于用户数据的传递起着重要的作用。
+
+### ICMP Flood 攻击
+ICMP Flood 的攻击原理和TCP Flood等攻击原理类似，属于流量型的攻击方式，也是利用大的流量给服务器带来较大的负载，影响服务器的正常服务。但是由于目前很多防火墙直接过滤ICMP报文， 因此ICMP Flood出现的频度较低。
+
+Ping Flood 攻击是ICMP Flood攻击的一种，攻击者通过快速发送大量的ping（ICMP echo请求）消耗服务器的资源，占用服务器的带宽。
+
+### SMURF攻击
+
+Smurf以最初发动这种攻击的程序“Smurf”来命名。这种攻击方法结合使用了IP欺骗和ICMP回复方法使大量网络传输充斥目标系统，引起目标系统拒绝为正常系统进行服务。攻击者向网络广播地址发送ICMP包，并将回复地址设置成受害网络的广播地址，通过使用ICMP应答请求数据包来淹没受害主机的方式进行，最终导致该网络的所有主机都对次ICMP应答请求作出答复，导致网络阻塞。更加复杂的Smurf攻击攻击将源地址改为第三方受害者，最终导致第三方崩溃。
+
+由于路由器等三层设备本身就不会转发目的地址是广播地址的报文，因此Smurf攻击在网络上很难形成攻击。在防火墙上体检Smurf攻击必须要求被攻击网络是之间连接到防火墙上。
+
+### 死亡之Ping攻击
+
+因为以太网长度有限，当一个IP包的长度超过以太网帧的最大尺寸时，包就会被分片，作为多个帧来发送。接收端的机器提取各个分片，并重组为一个完整的IP包。在正常情况下，IP头包含整个IP包的长度。当一个IP包被分片以后，头只包含各个分片的长度。分片并不包含整个IP包的长度信息，因此IP包一旦被分片，重组后的整个IP包的总长度只有在所在分片都接受完毕之后才能确定。
+
+在IP协议规范中规定了一个IP包的最大尺寸，而大多数的包处理程序又假设包的长度超过这个最大尺寸这种情况是不会出现的。因此，包的重组代码所分配的内存区域也最大不超过这个最大尺寸。这样，超大的包一旦出现，包当中的额外数据就会被写入其他正常区域。这很容易导致系统进入非稳定状态，是一种典型的缓存溢出（Buffer Overflow）攻击。在防火墙一级对这种攻击进行检测是相当难的，因为每个分片包看起来都很正常。
+
+由于使用ping工具很容易完成这种攻击，以至于它也成了这种攻击的首选武器，这也是这种攻击名字的由来。当然，还有很多程序都可以做到这一点，因此仅仅阻塞ping的使用并不能完全解决这个漏洞。预防死亡之Ping的最好方法是对操作系统打补丁，使内核将不再对超过规定长度的包进行重组。
 
 
 UDP攻击
