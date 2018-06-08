@@ -25,6 +25,10 @@ DDoS攻击
 * [HTTP攻击](#http攻击)
 	* [HTTP Get/Post Flood 攻击](#http-getpost-flood-攻击)
 	* [HTTP慢速攻击](#http慢速攻击)
+	* [Hash碰撞攻击](#hash碰撞攻击)
+	* [Apache 杀手攻击](#apache-杀手攻击)
+	* [RefRef攻击](#refref攻击)
+	* [XML Bomb 攻击](#xml-bomb-攻击)
 * [ICMP攻击](#icmp攻击)
 	* [ICMP Flood 攻击](#icmp-flood-攻击)
 	* [SMURF攻击](#smurf攻击)
@@ -70,95 +74,88 @@ DDoS(Distributed Denial of Service)，即分布式拒绝服务，前身为DoS（
 
 ### DDoS攻击类型总结
 
-
 <table class="tg">
   <tr>
-    <th class="tg-s6z2">OSI层级</th>
-    <th class="tg-s6z2">攻击内容</th>
+    <th class="tg-uys7">OSI层级</th>
+    <th class="tg-uys7">攻击内容</th>
   </tr>
   <tr>
-    <td class="tg-s6z2" rowspan="11">基于网络 (数据链路层、网络层、传输层)的攻击</td>
-    <td class="tg-s6z2"><a href="#ip%E7%A2%8E%E7%89%87%E6%94%BB%E5%87%BB">IP碎片攻击</a></td>
+    <td class="tg-uys7" rowspan="11">基于网络 (数据链路层、网络层、传输层)的攻击</td>
+    <td class="tg-uys7"><a href="#ip%E7%A2%8E%E7%89%87%E6%94%BB%E5%87%BB">IP碎片攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-s6z2"><a href="#%E6%B3%AA%E6%BB%B4%E6%94%BB%E5%87%BB">泪滴攻击</a></td>
+    <td class="tg-uys7"><a href="#%E6%B3%AA%E6%BB%B4%E6%94%BB%E5%87%BB">泪滴攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-s6z2"><a href="#syn-flood-%E6%94%BB%E5%87%BB">SYN Flood 攻击</a></td>
+    <td class="tg-uys7"><a href="#syn-flood-%E6%94%BB%E5%87%BB">SYN Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#syn-ack-flood-%E6%94%BB%E5%87%BB">其他TCP Flood攻击</a></td>
+    <td class="tg-c3ow"><a href="#syn-ack-flood-%E6%94%BB%E5%87%BB">其他TCP Flood攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-yw4l"><a href="#%E8%BF%9E%E6%8E%A5%E8%80%97%E5%B0%BD%E6%94%BB%E5%87%BB">连接耗尽攻击</a></td>
+    <td class="tg-c3ow"><a href="#%E8%BF%9E%E6%8E%A5%E8%80%97%E5%B0%BD%E6%94%BB%E5%87%BB">连接耗尽攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#tcp%E5%BC%82%E5%B8%B8%E6%8A%A5%E6%96%87%E6%94%BB%E5%87%BB">TCP异常报文攻击</a></td>
+    <td class="tg-c3ow"><a href="#tcp%E5%BC%82%E5%B8%B8%E6%8A%A5%E6%96%87%E6%94%BB%E5%87%BB">TCP异常报文攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#tcp%E8%99%9A%E5%81%87%E4%BC%9A%E8%AF%9D%E6%94%BB%E5%87%BB">TCP虚假会话攻击</a></td>
+    <td class="tg-c3ow"><a href="#tcp%E8%99%9A%E5%81%87%E4%BC%9A%E8%AF%9D%E6%94%BB%E5%87%BB">TCP虚假会话攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#land%E6%94%BB%E5%87%BB">LAND攻击</a></td>
+    <td class="tg-c3ow"><a href="#land%E6%94%BB%E5%87%BB">LAND攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#icmp-flood-%E6%94%BB%E5%87%BB">ICMP Flood 攻击</a></td>
+    <td class="tg-c3ow"><a href="#icmp-flood-%E6%94%BB%E5%87%BB">ICMP Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#smurf%E6%94%BB%E5%87%BB">SMURF攻击</a></td>
+    <td class="tg-c3ow"><a href="#smurf%E6%94%BB%E5%87%BB">SMURF攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#%E6%AD%BB%E4%BA%A1%E4%B9%8Bping%E6%94%BB%E5%87%BB">死亡之Ping攻击</a></td>
+    <td class="tg-c3ow"><a href="#%E6%AD%BB%E4%BA%A1%E4%B9%8Bping%E6%94%BB%E5%87%BB">死亡之Ping攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh" rowspan="4">基于DNS（传输层）的攻击</td>
-    <td class="tg-baqh"><a href="#udp-flood-%E6%94%BB%E5%87%BB">UDP Flood 攻击</a></td>
+    <td class="tg-c3ow" rowspan="4">基于DNS（传输层）的攻击</td>
+    <td class="tg-c3ow"><a href="#udp-flood-%E6%94%BB%E5%87%BB">UDP Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#udp%E5%88%86%E7%89%87%E6%94%BB%E5%87%BB">UDP分片攻击</a></td>
+    <td class="tg-c3ow"><a href="#udp%E5%88%86%E7%89%87%E6%94%BB%E5%87%BB">UDP分片攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#ntp%E5%8F%8D%E5%B0%84%E6%94%BE%E5%A4%A7%E6%94%BB%E5%87%BB">反射放大攻击</a></td>
+    <td class="tg-c3ow"><a href="#ntp%E5%8F%8D%E5%B0%84%E6%94%BE%E5%A4%A7%E6%94%BB%E5%87%BB">反射放大攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#dns%E6%94%BB%E5%87%BB">DNS攻击</a></td>
+    <td class="tg-c3ow"><a href="#dns%E6%94%BB%E5%87%BB">DNS攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh" rowspan="3">基于SSL/TLS协议（会话层及表示层）的攻击</td>
-    <td class="tg-baqh"><a href="#ssl-flood-%E6%94%BB%E5%87%BB">SSL Flood 攻击</a></td>
+    <td class="tg-c3ow" rowspan="3">基于SSL/TLS协议（会话层及表示层）的攻击</td>
+    <td class="tg-c3ow"><a href="#ssl-flood-%E6%94%BB%E5%87%BB">SSL Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#https-flood-%E6%94%BB%E5%87%BB">HTTPS Flood 攻击</a></td>
+    <td class="tg-c3ow"><a href="#https-flood-%E6%94%BB%E5%87%BB">HTTPS Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><a href="#thc-ssl-dos%E6%94%BB%E5%87%BB">THC-SSL-DoS攻击</a></td>
+    <td class="tg-c3ow"><a href="#thc-ssl-dos%E6%94%BB%E5%87%BB">THC-SSL-DoS攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-c3ow" rowspan="6">基于应用（表示层及应用层）的攻击</td>
+    <td class="tg-c3ow"><a href="#http-getpost-flood-%E6%94%BB%E5%87%BB">HTTP Get/Post Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-c3ow"><a href="#http%E6%85%A2%E9%80%9F%E6%94%BB%E5%87%BB">HTTP慢速攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-c3ow"><a href="#hash%E7%A2%B0%E6%92%9E%E6%94%BB%E5%87%BB">Hash碰撞攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-c3ow"><a href="#apache-%E6%9D%80%E6%89%8B%E6%94%BB%E5%87%BB">Apache 杀手攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-c3ow"><a href="#refref%E6%94%BB%E5%87%BB">RefRef攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-c3ow"><a href="#xml-bomb-%E6%94%BB%E5%87%BB">XML Bomb 攻击</a></td>
   </tr>
 </table>
-
 
 
 IP攻击
@@ -244,12 +241,29 @@ HTTP攻击
 
 ### HTTP慢速攻击
 HTTP慢速攻击是利用HTTP协议的正常交互机制，先与目标服务器建立一个连接，然后长时间保持该连接不释放。如果攻击者持续与目标服务器建立这样的连接，就会使目标服务器上的可用资源耗尽，无法提供正常服务。HTTP慢速攻击主要包括针对HTTP请求报文头部结束符的Slow Headers攻击，以及针对POST请求报文数据长度的Slow POST攻击。
+
 * **Slow Headers攻击**  
 HTTP请求头部的后面会存在一个空行（结束符），其中包括回车符和换行符，从而告知服务器请求头部结束，后面不再有请求头。如果服务器没有收到这个空行则会一直保持连接。Slow Headers攻击正是利用这一点，攻击者使用GET或POST请求方法与目标服务器建立连接，然后持续发送不包含结束符的HTTP头部报文，目标服务器会一直等待请求头部中的结束符而导致连接始终被占用。如果攻击者控制大量的僵尸主机向目标服务器发起这种攻击，将会导致服务器资源耗尽，无法正常提供服务。
 
 * **Slow POST攻击**  
 Slow POST攻击利用的是POST请求方法，攻击者向目标服务器发送POST请求报文提交数据，数据的长度设置为一个很大的数值，但是在随后的数据发送中，每次只发送很小的报文，这样就是导致目标服务器一直等待攻击者发送数据。如果攻击者控制大量的僵尸主机向目标服务器发起这种攻击，将会导致服务器资源耗尽，无法正常提供服务。
 
+### Hash碰撞攻击
+
+在HTTP请求中处理大量参数的时候，服务器通过使用Hash table（哈希表）访问表单值，达到快速查询修改的效果。Hash碰撞攻击正是利用了Hash算法的“非随机性”可以制造出多个的值不一样，但是码值一样数据，从而使Hash表退化成为一张单向链表，而导致网站或是程序的运行性能以级数下降，使得服务器几乎失去响应。
+![退化哈希表图示](http://cms.csdnimg.cn/articlev1/uploads/allimg/120110/121_120110121159_1.jpg)
+
+### Apache 杀手攻击
+
+Apache 杀手（Apache Killer）攻击是一个严重的针对Apache网络服务器的攻击漏洞，并在Apache版本2.2.21中被修补。这个漏洞允许攻击者向Apache服务器发送一个获取大量字节范围内URL内容的请求，从而有效的造成服务器的可用内存不足，最终达到消耗服务器资源的目的。根据2012年6月Netcraft的调查，接近2/3的互联网服务器使用Apache服务，因此这个致命的漏洞会使得没有及时更新升级的大多数互联网服务器处于极大的受此类攻击的危险之中。
+
+### RefRef攻击
+
+#RefRef是Anonymous黑客组织发布的一款攻击工具，它针对使用SQL数据库的网络服务器，通过利用MySQL的漏洞通过SQL注入进行攻击。#RefRef滥用了MySQL的BENCHMARK()函数，从而重复运行命令达到消耗服务器资源的目的。它不需要很多终端协同来攻击服务器，很少的几个甚至一个计算机就可以达到很严重的攻击效果。
+
+### XML Bomb 攻击
+
+XML Bomb 攻击，也被称作“Billion Laughs Attack”，属于递归实体扩展攻击。通用实体扩展攻击通常需要足够大的XML输入数据量，然而递归实体扩展攻击仅需要平均输入字节就能产生更强力的攻击效果。这种攻击方式依赖于XML解析器（Parser），通常为HTTP服务器来进行解析，从而完成小实体集的指数级增长。通过这种指数爆炸性增长方式，一个比通用实体扩展攻击使用小得多的输入数据量实际可增长得极大。XML Bomb攻击利用XML允许定义实体的漏洞进行攻击，假设攻击者定义实体一为20个实体二，而实体二为20个实体三，以此类推，直到实体八。这时XML编译器会将实体一编译为2^7=1,280,000,000个实体八，占用5GiB的内存。最终黑客可以利用这种漏洞达到攻击的效果。
 
 ICMP攻击
 ------
@@ -390,3 +404,4 @@ DNS反射攻击和传统DNS reply flood有两点本质的不同：
 `参考资料：`  
 `1. http://forum.huawei.com/enterprise/zh/thread-360365.html`  
 `2. https://www.corero.com/resources/glossary.html#Fragmented%20ACK%20Flood`  
+`3. https://www.infoq.com/news/2011/08/apache-killer`  
