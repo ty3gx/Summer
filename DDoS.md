@@ -29,6 +29,10 @@ DDoS攻击
 	* [ICMP Flood 攻击](#icmp-flood-攻击)
 	* [SMURF攻击](#smurf攻击)
 	* [死亡之Ping攻击](#死亡之ping攻击)
+* [SSL/TLS攻击](#ssltls攻击)
+	* [SSL Flood 攻击](#ssl-flood-攻击)
+	* [HTTPS Flood 攻击](#https-flood-攻击)
+	* [THC-SSL-DoS攻击](#thc-ssl-dos攻击)
 * [UDP攻击](#udp攻击)
 	* [UDP Flood 攻击](#udp-flood-攻击)
 	* [UDP分片攻击](#udp分片攻击)
@@ -120,16 +124,14 @@ DDoS(Distributed Denial of Service)，即分布式拒绝服务，前身为DoS（
     <td class="tg-baqh"><a href="#dns%E6%94%BB%E5%87%BB">DNS攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh" rowspan="3">基于SSL/TLS协议（会话层及表示层）的攻击</td>
+    <td class="tg-baqh"><a href="#ssl-flood-%E6%94%BB%E5%87%BB">SSL Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh"><a href="#https-flood-%E6%94%BB%E5%87%BB">HTTPS Flood 攻击</a></td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh"><a href="#thc-ssl-dos%E6%94%BB%E5%87%BB">THC-SSL-DoS攻击</a></td>
   </tr>
   <tr>
     <td class="tg-baqh"></td>
@@ -272,6 +274,23 @@ Smurf以最初发动这种攻击的程序“Smurf”来命名。这种攻击方�
 
 由于使用ping工具很容易完成这种攻击，以至于它也成了这种攻击的首选武器，这也是这种攻击名字的由来。当然，还有很多程序都可以做到这一点，因此仅仅阻塞ping的使用并不能完全解决这个漏洞。预防死亡之Ping的最好方法是对操作系统打补丁，使内核将不再对超过规定长度的包进行重组。
 
+
+SSL/TLS攻击
+------
+SSL（Secure Sockets Layer），即“安全套接层”，是上世纪90年代中期网景公司设计的为网络通信提供安全及数据完整性的一种安全协议，利用数据加密（Encryption）技术，可确保数据在网络上之传输过程中不会被截取及窃听。在IETF将 SSL标准化之后的名称改为 TLS（Transport Layer Security），即“传输层安全协议”。  
+
+
+### SSL Flood 攻击
+
+SSL Flood攻击和SSL重新协商攻击（见[THC-SSL-DoS攻击](#thc-ssl-dos攻击)）都是乘机利用服务器端协商安全TLS连接所需的处理能力，向服务器发送大量的垃圾数据，或者不断要求重新协商连接，从而致使服务器的资源超出限制并使其脱机。
+
+### HTTPS Flood 攻击
+
+目前多数在线商务使用SSL/TLS作为网页安全应用的一部分，从而确保通信安全及信息完整性。HTTPS Flood 攻击，即使用通过SSL/TLS加密的HTTP通信泛洪攻击越来越多的被运用到DDoS攻击中。HTTPS Flood攻击较普通HTTP Flood攻击更有效，因为服务器需要使用更多资源进行通信的加密/解密。这些特点使得对于HTTPS Flood的保护更为困难。
+
+### THC-SSL-DoS攻击
+
+THC（The Hacker's Choice），一个国际安全专家及黑客组织，发现了这种攻击方式并希望能借此提醒SSL用户安装安全补丁并使用反DDoS攻击保护工具的重要性。THC-SSL-DoS攻击仅需要数量很少的数据包就能对大型服务器进行很有效的DoS攻击。这种攻击手段首先建立一个正常的SSL握手过程，并在握手后立即请求一个新的加密密钥。攻击者重复这个需要消耗很多服务器计算资源的重新协商密钥的过程，直到服务器资源被耗尽。
 
 UDP攻击
 ------
