@@ -434,8 +434,40 @@ DDoS攻击工具要体现出更大的威力，通常会设计一种良好的流�
 
 ### 具体DDoS攻击工具
 * **LOIC**  
-[LOIC](https://sourceforge.net/projects/loic/)（Low Orbit Ion Cannon）是一款专著于web应用程序的DoS/DDoS攻击工具，它可以用TCP数据包、UDP数据包、HTTP请求于对目标网站进行DDoS/DoS测试，不怀好意的人可能利用LOIC构建僵尸网络。LOIC是用C#语言写的，这是一个C#新手的练手作品，靠GUI界面吸引了不明真相的小白们使用。由于程序设计上”有意或无意”留下的BUG导致” **一旦开始攻击在退出进程前无法真正停止攻击**“，潜在增大了攻击效果。攻击手段主要是以无限循环方式发送大量数据，并无其它特色。  
-攻击方法：UDP/TCP/HTTP GET
+[LOIC](https://github.com/NewEraCracker/LOIC)（Low Orbit Ion Cannon）是一款专著于web应用程序的DoS/DDoS攻击工具，它可以用TCP数据包、UDP数据包、HTTP请求于对目标网站进行DDoS/DoS测试，不怀好意的人可能利用LOIC构建僵尸网络。LOIC是用C#语言写的，这是一个C#新手的练手作品，靠GUI界面吸引了不明真相的小白们使用。由于程序设计上”有意或无意”留下的BUG导致” **一旦开始攻击在退出进程前无法真正停止攻击**“，潜在增大了攻击效果。攻击手段主要是以无限循环方式发送大量数据，并无其它特色。  
+**攻击方法：** UDP/TCP/HTTP GET
+
+* **XOIC**
+相对于LOIC的多平台（GNU/Linux, Windows, Mac OS以及Android），XOIC可运行的环境则少的多，仅支持win7以上的Windows平台。和LOIC相比，工具主打的还是流量型攻击，不过相比前者增加了Testmode模式，可以测试攻击主机的性能。  
+**攻击方法：** TCP/UDP/ICPM/HTTP GET
+
+* **HOIC**
+[HOIC](https://en.wikipedia.org/wiki/High_Orbit_Ion_Cannon)（High Orbit Ion Cannon）是完全开源的，HOIC攻击实际是靠大量正常HTTP请求进行DoS，如果有基于某些阈值的异常行为检测方案，完全可以有效检测、阻断HOIC攻击。类似NSFOCUS ADS系列的专业DDoS防护产品完全可以应对HOIC攻击。  
+**攻击方法：** HTTP GET
+
+* **HULK**
+HULK（HTTP Unbearable Load King）能够在互联网服务器上产生许多单一的伪造流量，绕开引擎的缓存，从而直接攻击服务器的资源池。HULK的特别之处在于：对于每一个请求都是独特的，能够绕开引擎的缓存直接作用于服务器的负载。HULK使用的技术为：
+	* 源客户的混淆——通过一个User Agent的已知列表，每HTTP一个请求的用户代理都是随机来自于已知列表。
+	* 引用伪装——指向请求的referer是伪造的，要么指向主机自己，要么指向主要的已知站点。referer是产生请求的url。
+	* 粘附性——使用标准的http请求去请求服务器，使用变化的的keep-alive时间窗保持连接建立不使用缓存——这是一个前提，向HTTP server请求no-cache，一个没有在背后cache service使用的server会呈现一个单独的页面。
+	* URL的独特组成——为了避免缓存和其他优化工具，HULK伪造了常见的参数名称和参数值，为了单一性，他们都是根据每个请求随机生成的，使得服务器就得处理每个事件的响应。   
+**攻击方法：** HTTP GET
+
+* **Dirt Jumper**
+Dirt Jumper 是一个通过botnet发动DDoS 攻击的工具。整体来看，由Dirt Jumper及其变种程序发起的攻击呈上升态势。原因不仅仅在于程序的简单易用，同时地下产业链相对成熟，从而得以广泛传播。从攻防角度上讲，Dirt Jumper攻击并没有引入新的方式，采用了比较传统的网络层和应用层攻击手段，防护并不困难。
+**攻击方法：** HTTP GET/POST，SYN Flood
+
+* **Slowhttptest**
+[Slowhttptest](https://github.com/shekyan/slowhttptest)是一个可以灵活配置的应用层攻击工具，它能发起诸如slowloris、Slow HTTP POST、Slow read、Slow range等工具实现的低带宽应用层拒绝服务攻击工具。它利用了http协议的一个特点——等待完整的http请求收到才会进行处理。如果一个http请求不完整，或者是在网络上慢速传递，http服务器会一直为这个请求保留资源等待它传输完毕。如果http服务器有太多的资源都在等待，这就构成了DDoS攻击。详细介绍可见本文[HTTP慢速攻击](#http慢速攻击)等板块。
+**攻击方法：** HTTP
+
+* **Slowloris** 
+[Slowloris](https://en.wikipedia.org/wiki/Slowloris_(computer_security))是在2009年由著名网络安全专家RSnake提出的一种攻击方法，其原理是以极低的速度往服务器发送HTTP请求。由于网络服务器对于并发的连接数都有一定的上限，因此若是恶意地占用住这些连接不释放，那么服务器的所有连接都将被恶意连接占用，从而无法接受新的请求，导致拒绝服务。  
+**攻击方法：** HTTP
+
+* **Zarp**
+[Zarp](https://github.com/hatRiot/zarp)是采用Python编写的、类似MSF的一款网络攻击测试框架。工具采用模块化设计，集漏洞扫描、嗅探、DDoS压力测试于一身。Zarp主要接口是一个CLI驱动的图形界面，采用多层菜单，使用起来相当方便。目前运行平台只限于linux，同时在安装之前要确保系统存在python2.7.x、git以及scapy。  
+**攻击方法：** TCP
 
 
 <br><br>
