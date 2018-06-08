@@ -450,15 +450,15 @@ HULK（HTTP Unbearable Load King）能够在互联网服务器上产生许多单
 	* 源客户的混淆——通过一个User Agent的已知列表，每HTTP一个请求的用户代理都是随机来自于已知列表。
 	* 引用伪装——指向请求的referer是伪造的，要么指向主机自己，要么指向主要的已知站点。referer是产生请求的url。
 	* 粘附性——使用标准的http请求去请求服务器，使用变化的的keep-alive时间窗保持连接建立不使用缓存——这是一个前提，向HTTP server请求no-cache，一个没有在背后cache service使用的server会呈现一个单独的页面。
-	* URL的独特组成——为了避免缓存和其他优化工具，HULK伪造了常见的参数名称和参数值，为了单一性，他们都是根据每个请求随机生成的，使得服务器就得处理每个事件的响应。   
+	* URL的独特组成——为了避免缓存和其他优化工具，HULK伪造了常见的参数名称和参数值，为了单一性，他们都是根据每个请求随机生成的，使得服务器就得处理每个事件的响应。      
 **攻击方法：** HTTP GET
 
 * **Dirt Jumper**
-Dirt Jumper 是一个通过botnet发动DDoS 攻击的工具。整体来看，由Dirt Jumper及其变种程序发起的攻击呈上升态势。原因不仅仅在于程序的简单易用，同时地下产业链相对成熟，从而得以广泛传播。从攻防角度上讲，Dirt Jumper攻击并没有引入新的方式，采用了比较传统的网络层和应用层攻击手段，防护并不困难。
+Dirt Jumper 是一个通过botnet发动DDoS 攻击的工具。整体来看，由Dirt Jumper及其变种程序发起的攻击呈上升态势。原因不仅仅在于程序的简单易用，同时地下产业链相对成熟，从而得以广泛传播。从攻防角度上讲，Dirt Jumper攻击并没有引入新的方式，采用了比较传统的网络层和应用层攻击手段，防护并不困难。  
 **攻击方法：** HTTP GET/POST，SYN Flood
 
 * **Slowhttptest**
-[Slowhttptest](https://github.com/shekyan/slowhttptest)是一个可以灵活配置的应用层攻击工具，它能发起诸如slowloris、Slow HTTP POST、Slow read、Slow range等工具实现的低带宽应用层拒绝服务攻击工具。它利用了http协议的一个特点——等待完整的http请求收到才会进行处理。如果一个http请求不完整，或者是在网络上慢速传递，http服务器会一直为这个请求保留资源等待它传输完毕。如果http服务器有太多的资源都在等待，这就构成了DDoS攻击。详细介绍可见本文[HTTP慢速攻击](#http慢速攻击)等板块。
+[Slowhttptest](https://github.com/shekyan/slowhttptest)是一个可以灵活配置的应用层攻击工具，它能发起诸如slowloris、Slow HTTP POST、Slow read、Slow range等工具实现的低带宽应用层拒绝服务攻击工具。它利用了http协议的一个特点——等待完整的http请求收到才会进行处理。如果一个http请求不完整，或者是在网络上慢速传递，http服务器会一直为这个请求保留资源等待它传输完毕。如果http服务器有太多的资源都在等待，这就构成了DDoS攻击。详细介绍可见本文[HTTP慢速攻击](#http慢速攻击)等板块。  
 **攻击方法：** HTTP
 
 * **Slowloris** 
@@ -478,6 +478,6 @@ Dirt Jumper 是一个通过botnet发动DDoS 攻击的工具。整体来看，由
 `参考资料：`  
 `1. http://forum.huawei.com/enterprise/zh/thread-360365.html`  
 `2. https://www.corero.com/resources/glossary.html#Fragmented%20ACK%20Flood`  
-`3. https://security.radware.com/ddos-knowledge-center/ddospedia`
+`3. https://security.radware.com/ddos-knowledge-center/ddospedia`  
 `4. https://www.infoq.com/news/2011/08/apache-killer`  
 `5. http://blog.nsfocus.net/evolution-of-ddos-attack-tools/`
