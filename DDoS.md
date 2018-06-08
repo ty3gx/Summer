@@ -434,7 +434,7 @@ DDoS攻击工具要体现出更大的威力，通常会设计一种良好的流�
 
 ### 具体DDoS攻击工具
 * **LOIC**  
-[LOIC](https://sourceforge.net/projects/loic/)（Low Orbit Ion Cannon）是一款专著于web应用程序的DoS/DDoS攻击工具，它可以用TCP数据包、UDP数据包、HTTP请求于对目标网站进行DDoS/DoS测试，不怀好意的人可能利用LOIC构建僵尸网络。LOIC是用C#语言写的，这是一个C#新手的练手作品，靠GUI界面吸引了不明真相的小白们使用。由于程序设计上”有意或无意”留下的BUG导致” **一旦开始攻击在退出进程前无法真正停止攻击**“，潜在增大了攻击效果。攻击手段主要是以无限循环方式发送大量数据，并无其它特色。
+[LOIC](https://sourceforge.net/projects/loic/)（Low Orbit Ion Cannon）是一款专著于web应用程序的DoS/DDoS攻击工具，它可以用TCP数据包、UDP数据包、HTTP请求于对目标网站进行DDoS/DoS测试，不怀好意的人可能利用LOIC构建僵尸网络。LOIC是用C#语言写的，这是一个C#新手的练手作品，靠GUI界面吸引了不明真相的小白们使用。由于程序设计上”有意或无意”留下的BUG导致” **一旦开始攻击在退出进程前无法真正停止攻击**“，潜在增大了攻击效果。攻击手段主要是以无限循环方式发送大量数据，并无其它特色。  
 攻击方法：UDP/TCP/HTTP GET
 
 
