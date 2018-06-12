@@ -16,7 +16,8 @@
 * [requests](http://www.python-requests.org/en/master/)  
 `pip install requests`
 
-* [GeoIP](https://github.com/maxmind/geoip-api-python)  
+* [GeoIP](https://github.com/maxmind/geoip-api-python)
+`sudo apt-get install libgeoip-dev`
 `sudo pip install GeoIP`  
 
 * [pyecharts](http://pyecharts.org/#/zh-cn/)  
