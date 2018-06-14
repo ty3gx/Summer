@@ -10,6 +10,7 @@ from datetime import timedelta
 import os
 import GeoIP
 from pyecharts import Geo
+from urllib2 import Request, urlopen
 
 THRESHOLD = 2
 PRINT_LIMIT = 5
@@ -22,6 +23,8 @@ srcPort = {}
 dstPort = {}
 srcIPPort = {}
 dstIPPort = {}
+#srcISP = {}
+#dstISP = {}
 TCPPckCount = 0
 UDPPckCount = 0
 SYNFlagCount = 0
@@ -31,6 +34,22 @@ DNSCount = 0
 abnormalFlags = 0
 startTime = datetime.strptime("9999-12-31 23:59:59", "%Y-%m-%d %H:%M:%S")
 endTime = datetime.strptime("0001-1-1 0:0:0", "%Y-%m-%d %H:%M:%S")
+
+def get_isp_info(ip):
+	import requests
+	r = requests.get('http://ip.taobao.com/service/getIpInfo.php?ip=%s' %ip) #淘宝IP地址库接口       
+	if  r.json()['code'] == 0 :
+		i = r.json()['data']
+                 
+		country = i['country']  #国家 
+		area = i['area']        #区域
+		region = i['region']    #地区
+		city = i['city']        #城市
+		isp = i['isp']          #运营商
+                            
+		return isp
+	else:
+		return "N/A"
 
 def parseFile(filename):
 	g = GeoIP.open("GeoLiteCity.dat", GeoIP.GEOIP_INDEX_CACHE | GeoIP.GEOIP_CHECK_CACHE)
@@ -310,6 +329,25 @@ if __name__ == '__main__':
 	sorted_srcIP = sorted(srcIP.items(), key=operator.itemgetter(1), reverse=True)
 	sorted_dstIP = sorted(dstIP.items(), key=operator.itemgetter(1), reverse=True)
 
+	#global srcISP, dstISP
+	#for i in range (0, len(sorted_srcIP)):
+	#	sISP = get_isp_info(sorted_srcIP[i][0])
+	#	if srcISP.has_key(sISP):
+	#		srcISP[sISP] += sorted_srcIP[i][1]
+	#	else:
+	#		srcISP[sISP] = sorted_srcIP[i][1]
+
+	#for i in range (0, len(sorted_dstIP)):
+	#	dISP = get_isp_info(sorted_dstIP[i][0])
+	#	if dstISP.has_key(dISP):
+	#		dstISP[dISP] += sorted_dstIP[i][1]
+	#	else:
+	#		dstISP[dISP] = sorted_dstIP[i][1]
+			
+
+	#sorted_srcISP = sorted(srcISP.items(), key=operator.itemgetter(1), reverse=True)
+	#sorted_dstISP = sorted(dstISP.items(), key=operator.itemgetter(1), reverse=True)
+
 	sorted_srcPort = sorted(srcPort.items(), key=operator.itemgetter(1), reverse=True)
 	sorted_dstPort = sorted(dstPort.items(), key=operator.itemgetter(1), reverse=True)
 
@@ -331,6 +369,8 @@ if __name__ == '__main__':
 			tempCount += 1
 	print("Number of source IPs: " + str(len(srcIP)))
 	print("Number of destination IPs: " + str(len(dstIP)))
+	#print("Number of source ISPs: " + str(len(srcISP)))
+	#print("Number of destination ISPs: " + str(len(dstISP)))
 	print("The number of source IPs with only two or less packets sent: " + str(tempCount))
 	print("")
 	print("TCP  packets processed: " + str(TCPPckCount))
@@ -346,6 +386,12 @@ if __name__ == '__main__':
 	print(sorted_srcGeoIP[0:options.maxIP])
 	print("Most frequent destination IP cities: ")
 	print(sorted_dstGeoIP[0:options.maxIP])
+
+	#print("")
+	#print("Most frequent source ISPs: ")
+	#print(sorted_srcISP[0:options.maxIP])
+	#print("Most frequent destination ISPs: ")
+	#print(sorted_dstISP[0:options.maxIP])
 
 	print("")
 	print("Most frequent source IP and ports:")
@@ -364,7 +410,8 @@ if __name__ == '__main__':
 				gir["region_name"] = "N/A"
 			if gir["country_name"] is None:
 				gir["country_name"] = "N/A"
-			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"])
+			tempISP = get_isp_info(sorted_srcIP[i][0])
+			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"] + ", ISP: " + tempISP)
 		else:
 			print ("N/A")
 	print("")
@@ -387,12 +434,39 @@ if __name__ == '__main__':
 				gir["region_name"] = "N/A"
 			if gir["country_name"] is None:
 				gir["country_name"] = "N/A"
-			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"])
+			tempISP = get_isp_info(sorted_srcIP[i][0])
+			print (gir["city"] + ", " + gir["region_name"] + ", " + gir["country_name"] + ", ISP: " + tempISP)
 		else:
 			print ("N/A")
 	print("")
 	print("Most frequent destination ports:")
 	print sorted_dstPort[0:options.maxIP]
+
+	print("-------------------------------------------------------------------")
+	print("Detailed analysis of IPs: ")
+	headers = {
+    	'Accept': 'application/json'
+    }
+	print("Most frequent source IPs:")
+	for i in range(0, options.maxIP):
+		if i >= len(sorted_srcIP):
+			break
+		print (str(sorted_srcIP[i]) + ": ")
+		request = Request("https://api.ipdata.co/" + sorted_srcIP[i][0] + "/", headers=headers)
+		response_body = urlopen(request).read()
+  		print response_body
+
+  	print("-------------------------------------------------------------------")
+  	print("Most frequent destination IPs:")
+	for i in range(0, options.maxIP):
+		if i >= len(sorted_dstIP):
+			break
+		print (str(sorted_dstIP[i]) + ": ")
+		request = Request("https://api.ipdata.co/" + sorted_dstIP[i][0] + "/", headers=headers)
+		response_body = urlopen(request).read()
+  		print response_body
+	
+
 
 	#print (geolite2.lookup(sorted_dstIP[0][0]).country)
 	#print (geolite2.lookup(sorted_dstIP[0][0]).city.names)

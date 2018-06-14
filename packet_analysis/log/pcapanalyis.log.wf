@@ -1,144 +1,294 @@
-ERROR: 06-05 11:31:26: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:28: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:31:28: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:06:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:19: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
+ERROR: 06-14 10:17:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:20: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:21: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:21: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:21: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:21: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:34:21: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:17:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:36:54: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:36:55: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:18: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
 
-ERROR: 06-05 11:38:04: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 11:38:05: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:25:42: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:25:44: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:28:21: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:28:23: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:29:21: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:29:22: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:36:01: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:36:02: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:38:22: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:38:23: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:40:44: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:40:45: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:43:00: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:43:02: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:43:39: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:43:40: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:19: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:44:26: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:18:20: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:44:27: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:06: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:45:29: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:06: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
 
-ERROR: 06-05 14:45:30: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:54:54: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:54:55: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:55:47: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:55:48: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:58:31: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00&l\xf0\x818', spa='=\xbc\xbf1', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf/', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:26:6c:f0:81:38 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
-ERROR: 06-05 14:58:32: print_pcap.py:312 * 140735673520960 No Valid IP Packet(not v4 or v6): ARP ARP(op=2, sha='\x00\xa0\xd1\xed\x16C', spa='\xc0\xa8\xbf9', tha='\x00\xa0\xd1\xed\x16C', tpa='\xc0\xa8\xbf9', data='\x00\x00\x00\x00\xa7\x00\x00\x00>\x01\x00\x00\x06\x00\x00\x00\xe94') src_mac:00:a0:d1:ed:16:43 dst_mac:ff:ff:ff:ff:ff:ff
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:19:07: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:13: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:13: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
+
+ERROR: 06-14 10:23:13: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:13: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:13: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:23:14: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:15: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:16: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:24:17: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:31: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\xcc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): LLC LLC(oui=12, type=267, data='\x00\x00\x00\x00\x00\x80\x00\x00%d\x1c)\xd3\x00\x00\x00\x13\x80\x01\x00\x07}\xbf\x07\x80\x82\x81\x01\x00\x14\x00\x02\x00\x0f\x00\x00\x00\x00\x00\x02\x00\x01') src_mac:00:07:7d:bf:07:b0 dst_mac:01:00:0c:cc:cc:cd
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xe3\xc3\xe2', spa='\xc0\xa8\xbf\xdc', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\xdc', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:e3:c3:e2 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='t\x86z\xdc_\xa8', spa='\xc0\xa8\xbf\x1e', tha='\x00\x00\x00\x00\x00\x00', tpa='\xc0\xa8\xbf\x1e', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:74:86:7a:dc:5f:a8 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbff', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfh', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfg', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfj', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfi', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfk', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:32: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfl', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfn', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfq', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfm', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfo', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfp', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfr', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbfs', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x81', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbft', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
+
+ERROR: 06-14 10:32:33: print_pcap.py:312 * 140735934329664 No Valid IP Packet(not v4 or v6): ARP ARP(sha='\x00\x161\xf1\x914', spa='=\xbc\xbfu', tha='\x00\x00\x00\x00\x00\x00', tpa='=\xbc\xbf\x82', data='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00') src_mac:00:16:31:f1:91:34 dst_mac:ff:ff:ff:ff:ff:ff
 
